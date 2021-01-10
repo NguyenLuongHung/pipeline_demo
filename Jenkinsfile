@@ -24,9 +24,9 @@ pipeline {
       steps {
         echo 'Deploying the application...'
         withCredentials([
-          usernamePassword(credentialsId: 'server-credentials', usernameVariable: USER, passwordVariable: PWD)
+          usernamePassword(credentialsId: 'server-credentials', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')
         ]) {
-          sh 'echo username is $USER and password is $PWD '
+          sh 'echo username is $USERNAME and password is $PASSWORD '
         }
       }
     }
